@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+<!--网页头部-->
+<div id="top">
+    <div class="main">
+        <h2>于朋君</h2>
+
+        <p class="sex"><i></i></p>
+
+        <p style="font-size: 18px">前端开发工程师</p>
+
+        <p class="phone"><i></i>18661790878</p>
+
+        <p class="mail"><i></i>lq_yupengjun@126.com</p>
+
+        <p class="qq"><i></i>406490508</p>
+
+        <p class="github"><i></i><a href="https://github.com/Gary23" target="_blank">Gary23</a></p>
+    </div>
+</div>
+
+<!--fullpage主体部分-->
+<div id="fullpage">
+    <!--第一页，个人技能列表-->
+    <div id="skill" class="section first">
+        <div class="main">
+            <!--个人技能列表左部分-->
+            <div class="skill_left">
+                <div class="text">
+                    <h2>技能</h2>
+
+                    <div class="desc1">
+                        <p>比程序员更懂设计</p>
+                        <p>比设计师更懂编程</p>
+                        <p>前端开发工程师要掌握</p>
+                        <p>前端技术、性能优化</p>
+                        <p>SEO、服务器端基础</p>
+                        <p>还要学会</p>
+                        <p>运用各种工具进行辅助开发</p>
+                        <p>并且要考虑</p>
+                        <p>代码可维护性</p>
+                        <p>组件易用性</p>
+                        <p>浏览器兼容等</p>
+
+                    </div>
+
+                </div>
+                <!--渐变层-->
+                <div class="left_bg"></div>
+            </div>
+            <!--个人技能列表右部分-->
+            <div class="skill_right">
+                <div class="title">
+                    <h2>列表</h2>
+                </div>
+                <div class="item_html">
+                    <div class="html">
+                        <div class="html_bg"></div>
+                    </div>
+                    <div class="content">
+                        <div class="text">
+                            <p>能熟练使用html写页面结构,对html5的新API和标签比较了解。</p>
+                            <p>例如canvas、FileList、FileReader、geolocation、sessionStorage和localStorage等</p>
+                            <p>注重html的性能优化,提高用户体验和搜索引擎友好性。</p>
+                            <p>对代码的语义化、结构化以及兼容性问题有深刻理解。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item_css">
+                    <div class="css">
+                        <div class="css_bg"></div>
+                    </div>
+                    <div class="content">
+                        <div class="text">
+                            <p>熟练使用css写页面的样式部分,对css3的新属性及各浏览器的兼容性比较了解。</p>
+                            <p>熟知css预编译器less的使用。</p>
+                            <p>使用过css框架bootstrap,熟练掌握媒体查询功能制作响应式页面。</p>
+                            <p>了解各种css布局,例如百分比布局、弹性伸缩布局、栅格化布局。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item_js">
+                    <div class="js">
+                        <div class="js_bg"></div>
+                    </div>
+                    <div class="content">
+                        <div class="text">
+                            <p>熟练能使用js写页面的交互部分,了解W3C标准及IE、Firefox、Google浏览器的兼容性问题。</p>
+                            <p>经常用jQuery库,也喜欢用原生js写交互,自己封装过部分jQuery的方法,对面向对象有一定了解。</p>
+                            <p>熟悉ajax数据交互原理,使用过通过模板或字符串拼接的方式将获取的数据动态添加到页面。</p>
+                            <p>使用过Angularjs框架,对模块化、指令、数据绑定、路由等概念有一定了解。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="demo" class="section second">
+        <div class="big"></div>
+        <div class="slider">
+            <div class="main">
+
+                <div class="arrow arrow_left"><span>&lt;</span></div>
+                <div class="arrow arrow_right"><span>&gt;</span></div>
+
+
+            </div>
+        </div>
+    </div>
+    <div id="about" class="section third">关于我</div>
+
+</div>
+
+<script>
+    $('#fullpage').fullpage({
+        // 设置背景色
+//        sectionsColor : ['#0da5d6', '#2AB561', '#DE8910', '#16BA9D', '#0DA5D6'],
+        afterLoad: function (anchorLink, index) {
+//                $('.section').removeClass('current');
+//
+//                // 延时100毫秒执行
+//                setTimeout(function () {
+//                    $('.section').eq(index - 1).addClass('current');
+//                }, 100);
+        }
+    });
+</script>
+</body>
+</html>

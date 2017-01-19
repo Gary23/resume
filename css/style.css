@@ -1,0 +1,430 @@
+body, div, h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: 'microsoft yahei';
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+/*顶部固定位置的个人资料*/
+#top {
+    width: 100%;
+    height: 80px;
+    background: #ffffff;
+    position: fixed;
+    z-index: 999;
+    filter: alpha(opacity=90);
+    opacity: 0.9;
+    cursor: default;
+    border-bottom: 1px solid #aaa;
+
+}
+
+#top .main {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#top .main h2 {
+    display: inline-block;
+    float: left;
+    height: 80px;
+    line-height: 80px;
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+#top .main p {
+    float: left;
+    font-weight: bold;
+    height: 80px;
+    line-height: 80px;
+}
+
+#top .main p i {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/icon.fw.png");
+    vertical-align: middle;
+}
+
+/*个人资料中的icon的位置*/
+#top .sex i {
+    background-position: 0 -90px;
+    margin: 0 30px 0 30px;
+}
+
+#top .phone i {
+    background-position: 0 -60px;
+    margin: 0 5px 0 30px;
+}
+
+#top .mail i {
+    background-position: 0 -30px;
+    margin: 0 5px 0 30px;
+}
+
+#top .qq i {
+    background-position: 0 -120px;
+    margin: 0 5px 0 30px;
+}
+
+#top .github i {
+    margin: 0 5px 0 30px;
+}
+
+#top .github a:hover {
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+
+/*个人技能页面部分*/
+#skill {
+    background: linear-gradient(90deg, #333 20%, #fff 60%);
+}
+
+#skill .main{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#skill .skill_left {
+    width: 25%;
+    height: 100%;
+    float: left;
+    background-image: url("../img/skill_bg6.jpg");
+    background-size: cover;
+    position: relative;
+    color: #000;
+}
+
+/*个人技能的左边部分*/
+#skill .skill_left h2 {
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    font-size: 40px;
+    letter-spacing: 18px;
+}
+
+#skill .skill_left .desc1 {
+    position: absolute;
+    top: 200px;
+    right: 20px;
+    text-align: right;
+}
+
+#skill .skill_left .desc1 p {
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/*个人技能右边部分*/
+#skill .skill_right {
+    float: right;
+    background: url("../img/skill_bg7.jpg") right;
+    background-size: cover;
+    height: 100%;
+    width: 75%;
+}
+
+#skill .skill_right .title {
+    width: 100%;
+    height: 20%;
+    position: relative;
+}
+
+#skill .skill_right h2 {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    font-size: 40px;
+    letter-spacing: 18px;
+    color: #EEEEEE;
+}
+
+/*技能的四行列表部分*/
+#skill .item_html{
+    height: 26%;
+    width: 100%;
+    overflow: hidden;
+}
+#skill .html {
+    float: left;
+    position: relative;
+    margin: 50px 0 0 50px;
+    width: 100px;
+    height: 100px;
+    background-image: url("../img/html1.png");
+    background-size: cover;
+    transform: translateY(-10%);
+    transition: transform 1s;
+}
+
+#skill .html:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50px;
+    bottom: -20px;
+    height: 8px;
+    width: 100%;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, 0);
+    transition: transform 1s;
+}
+
+#skill .html:hover {
+    transform: translateY(-40px);
+    transition: transform 1s;
+}
+
+#skill .html:hover:after {
+    transform: translate(-50%, 20px) scale(0.75);
+    transition: transform 1s;
+
+}
+
+#skill .html:hover .html_bg {
+    filter: alpha(opacity=20);
+    opacity: 0.2;
+    transition: all 0.5s;
+}
+
+#skill .html .html_bg {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(200deg, red, orange);
+    filter: alpha(opacity=40);
+    opacity: 0.4;
+    transition: all 0.5s;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+#skill .item_css{
+    height: 26%;
+    width: 100%;
+    /*background: linear-gradient(90deg, #b5c1b3 30%, #B3D884);*/
+    overflow: hidden;
+}
+#skill .css {
+    float: left;
+    position: relative;
+    margin: 50px 0 0 50px;
+    width: 100px;
+    height: 100px;
+    background-image: url("../img/css1.png");
+    background-size: cover;
+    transform: scale(1);
+    transform: translateY(-10%);
+    transition: transform 1s;
+}
+
+#skill .css:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50px;
+    bottom: -20px;
+    height: 8px;
+    width: 100%;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, 0);
+    transition: transform 1s;
+}
+
+#skill .css:hover {
+    transform: translateY(-40px);
+    transition: transform 1s;
+}
+
+#skill .css:hover:after {
+    transform: translate(-50%, 20px) scale(0.75);
+    transition: transform 1s;
+
+}
+
+#skill .css:hover .css_bg {
+    filter: alpha(opacity=20);
+    opacity: 0.2;
+    transition: all 0.5s;
+}
+
+#skill .css .css_bg {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(200deg, green, blue);
+    filter: alpha(opacity=40);
+    opacity: 0.4;
+    transition: all 0.5s;
+    border-radius: 10px;
+}
+
+/*#skill .item_css .content{*/
+    /*width: 75%;*/
+    /*height: 55%;*/
+    /*float: left;*/
+    /*background: #0F74B5;*/
+    /*margin: 3% 0 0 4%;*/
+    /*border: 10px solid #EEEEEE;*/
+    /*border-radius: 20px;*/
+    /*box-shadow: inset 5px 5px 20px 0px #333;*/
+/*}*/
+
+#skill .item_js{
+    height: 26%;
+    width: 100%;
+    /*background: linear-gradient(90deg, #91b0bd 30%, #80C583);*/
+    overflow: hidden;
+}
+#skill .js {
+    float: left;
+    position: relative;
+    margin: 50px 0 0 50px;
+    width: 100px;
+    height: 100px;
+    background-image: url("../img/js1.png");
+    background-size: cover;
+    transform: scale(1);
+    transform: translateY(-10%);
+    transition: transform 1s;
+}
+
+#skill .js:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50px;
+    bottom: -20px;
+    height: 8px;
+    width: 100%;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, 0);
+    transition: transform 1s;
+}
+
+#skill .js:hover {
+    transform: translateY(-40px);
+    transition: transform 1s;
+}
+
+#skill .js:hover:after {
+    transform: translate(-50%, 20px) scale(0.75);
+    transition: transform 1s;
+
+}
+
+#skill .js:hover .js_bg {
+    filter: alpha(opacity=20);
+    opacity: 0.2;
+    transition: all 0.5s;
+}
+
+#skill .js .js_bg {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(200deg, red, black);
+    filter: alpha(opacity=40);
+    opacity: 0.4;
+    transition: all 0.5s;
+    border-radius: 10px;
+}
+
+#skill .content{
+    width: 75%;
+    height: 55%;
+    float: left;
+    margin: 3% 0 0 4%;
+    border: 10px solid #999;
+    border-radius: 20px;
+    box-shadow: inset 5px 5px 20px 0px #333;
+    display: table;
+}
+
+#skill .item_html .content{
+    background: #C34814;
+
+}
+
+#skill .item_css .content{
+    background: #0F74B5;
+}
+
+#skill .item_js .content{
+    background: #AB1D2C;
+}
+
+#skill .skill_right .text{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding: 10px 0;
+    color: #eee;
+    letter-spacing: 1px;
+    line-height: 22px;
+}
+
+/*demo部分*/
+#demo {
+    background: url("../img/demo_bg.png");
+    /*background-size: cover;*/
+}
+#demo .big {
+    width: 1200px;
+    height: 70%;
+    background: #fff;
+    margin: 0 auto;
+}
+#demo .slider{
+    width: 100%;
+    height: 30%;
+    /*margin: 0 auto;*/
+    background: #333;
+}
+
+#demo .slider .main {
+    width: 1000px;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+#demo .slider .arrow{
+    width: 30px;
+    height: 60px;
+    border: 1px solid orange;
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    color: orange;
+    font-size: 30px;
+    line-height: 60px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#demo .slider .arrow_left{
+    left: 0;
+}
+#demo .slider .arrow_right{
+    right: 0;
+}
+
