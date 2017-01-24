@@ -569,3 +569,23 @@ img {
     transition: all 0.5s;
 }
 
+#about .about {
+    width: 300px;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.2);
+    position: relative;
+    /*top: 200%;*/
+}
+
+
+#about canvas {
+    position: absolute;
+    padding:0;
+    margin:0;
+}
+
+#about div.btnbg {
+    position:fixed;
+    left:0;
+    top:0;
+}
