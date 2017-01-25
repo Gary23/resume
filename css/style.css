@@ -25,32 +25,32 @@ img {
     background: #ffffff;
     position: fixed;
     z-index: 999;
-    filter: alpha(opacity=90);
-    opacity: 0.9;
+    filter: alpha(opacity=80);
+    opacity: 0.8;
     cursor: default;
     border-bottom: 1px solid #aaa;
 
 }
-
+/*顶部的版心*/
 #top .main {
     width: 1000px;
     margin: 0 auto;
 }
+
 #top .main h2,
 #top .main .sex,
-#top .main .work{
+#top .main .work {
     float: left;
 }
-#top .main .desc,#top .main .phone,#top .main .mail,#top .main .github{
+
+#top .main .desc, #top .main .phone, #top .main .mail, #top .main .github,#top .main .down {
     float: right;
 }
 
-#top .main .desc{
-    font-size: 18px;
-    letter-spacing: 2px;
-    filter: alpha(opacity=0);
-    opacity: 0;
+#top .main .desc,#top .main .down{
+    display: none;
 }
+
 
 #top .main h2 {
     display: inline-block;
@@ -64,8 +64,7 @@ img {
     font-weight: bold;
     height: 80px;
     line-height: 80px;
-    filter: alpha(opacity=0);
-    opacity: 0;
+
 }
 
 #top .main p i {
@@ -77,7 +76,7 @@ img {
 }
 
 /*个人资料中的icon的位置*/
-/*第一页的内容*/
+
 #top .sex i {
     background-position: 0 -90px;
     margin: 0 30px 0 30px;
@@ -93,11 +92,6 @@ img {
     margin: 0 5px 0 30px;
 }
 
-/*#top .qq i {*/
-    /*background-position: 0 -120px;*/
-    /*margin: 0 5px 0 30px;*/
-/*}*/
-
 #top .github i {
     margin: 0 5px 0 30px;
 }
@@ -107,53 +101,32 @@ img {
     opacity: 0.5;
 }
 
-#top.firstcurrent .mail,
-#top.firstcurrent .sex,
-#top.firstcurrent .work,
-#top.firstcurrent .phone,
-#top.firstcurrent .github{
-    filter: alpha(opacity=100);
-    opacity: 1;
-    transition: all 1s ease-out 0.3s;
-}
-#top.firstcurrent .desc{
-    filter: alpha(opacity=0);
-    opacity: 0;
-    transition: all 1s ease-out 0.3s;
-}
-
 /*第二页内容*/
-#top.secondcurrent .mail,
-#top.secondcurrent .sex,
-#top.secondcurrent .work,
-#top.secondcurrent .phone,
-#top.secondcurrent .github{
-    filter: alpha(opacity=100);
-    opacity: 1;
+#top.secondcurrent .desc {
+    display: block;
+    font-size: 18px;
+    letter-spacing: 2px;
 }
 
-#top.secondcurrent .desc{
-    filter: alpha(opacity=100);
-    opacity: 1;
-    transition: all 1s ease-out 0.3s;
+/*第三页内容*/
+#top.thirdcurrent .down {
+    display: block;
 }
-
-
-
-
-
-
-
-
-
-
-
+#top.thirdcurrent .down a{
+    font-size: 18px;
+    letter-spacing: 2px;
+}
 
 
 /*个人技能页面部分*/
 #skill {
     background: linear-gradient(90deg, #333 20%, #fff 60%);
     overflow: hidden;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    cursor: default;
 }
 
 #skill .main {
@@ -163,6 +136,7 @@ img {
     overflow: hidden;
 }
 
+/*个人技能的左半部分*/
 #skill .skill_left {
     width: 25%;
     height: 100%;
@@ -173,7 +147,6 @@ img {
     color: #000;
 }
 
-/*个人技能的左边部分*/
 #skill .skill_left h2 {
     position: absolute;
     top: 100px;
@@ -182,7 +155,6 @@ img {
     letter-spacing: 18px;
     filter: Alpha(Opacity=0);
     opacity: 0;
-    /*transition: all 1s ease-out 0.3s;*/
 }
 
 #skill .skill_left .desc1 {
@@ -198,10 +170,10 @@ img {
     font-weight: bold;
     filter: Alpha(Opacity=0);
     opacity: 0;
-    /*transition: all s ease-out 0.3s;*/
 }
 
-#skill.current .desc1 p, #skill.current h2,#skill.current .skill_right h2 {
+/*左半部分的动画*/
+#skill.current .desc1 p, #skill.current h2, #skill.current .skill_right h2 {
     filter: Alpha(Opacity=100);
     opacity: 1;
     transition: all 2s ease-out 0.3s;
@@ -231,164 +203,38 @@ img {
     color: #EEEEEE;
     filter: Alpha(Opacity=0);
     opacity: 0;
-    /*transition: all 1s ease-out 0.3s;*/
+
 }
 
 /*技能的四行列表部分*/
-#skill .item_html {
+/*技能名称部分*/
+#skill .item {
     height: 26%;
     width: 100%;
     overflow: hidden;
 }
 
-#skill .html {
+#skill .skill_name {
     float: left;
     position: relative;
     margin: 50px 0 0 50px;
     width: 100px;
     height: 100px;
+    background-size: cover;
+    transform: translateY(-10%);
+    transition: transform 1s;
+}
+#skill .html{
     background-image: url("../img/html1.png");
-    background-size: cover;
-    transform: translateY(-10%);
-    transition: transform 1s;
 }
-
-#skill .html:after {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 50px;
-    bottom: -20px;
-    height: 8px;
-    width: 100%;
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.2);
-    transform: translate(-50%, 0);
-    transition: transform 1s;
-}
-
-#skill .html:hover {
-    transform: translateY(-40px);
-    transition: transform 1s;
-}
-
-#skill .html:hover:after {
-    transform: translate(-50%, 20px) scale(0.75);
-    transition: transform 1s;
-
-}
-
-#skill .html:hover .html_bg {
-    filter: alpha(opacity=20);
-    opacity: 0.2;
-    transition: all 0.5s;
-}
-
-#skill .html .html_bg {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(200deg, red, orange);
-    filter: alpha(opacity=40);
-    opacity: 0.4;
-    transition: all 0.5s;
-    border-radius: 10px;
-}
-
-#skill .item_css {
-    height: 26%;
-    width: 100%;
-    /*background: linear-gradient(90deg, #b5c1b3 30%, #B3D884);*/
-    overflow: hidden;
-}
-
 #skill .css {
-    float: left;
-    position: relative;
-    margin: 50px 0 0 50px;
-    width: 100px;
-    height: 100px;
     background-image: url("../img/css1.png");
-    background-size: cover;
-    transform: scale(1);
-    transform: translateY(-10%);
-    transition: transform 1s;
 }
-
-#skill .css:after {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 50px;
-    bottom: -20px;
-    height: 8px;
-    width: 100%;
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.2);
-    transform: translate(-50%, 0);
-    transition: transform 1s;
-}
-
-#skill .css:hover {
-    transform: translateY(-40px);
-    transition: transform 1s;
-}
-
-#skill .css:hover:after {
-    transform: translate(-50%, 20px) scale(0.75);
-    transition: transform 1s;
-
-}
-
-#skill .css:hover .css_bg {
-    filter: alpha(opacity=20);
-    opacity: 0.2;
-    transition: all 0.5s;
-}
-
-#skill .css .css_bg {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(200deg, green, blue);
-    filter: alpha(opacity=40);
-    opacity: 0.4;
-    transition: all 0.5s;
-    border-radius: 10px;
-}
-
-/*#skill .item_css .content{*/
-/*width: 75%;*/
-/*height: 55%;*/
-/*float: left;*/
-/*background: #0F74B5;*/
-/*margin: 3% 0 0 4%;*/
-/*border: 10px solid #EEEEEE;*/
-/*border-radius: 20px;*/
-/*box-shadow: inset 5px 5px 20px 0px #333;*/
-/*}*/
-
-#skill .item_js {
-    height: 26%;
-    width: 100%;
-    /*background: linear-gradient(90deg, #91b0bd 30%, #80C583);*/
-    overflow: hidden;
-}
-
 #skill .js {
-    float: left;
-    position: relative;
-    margin: 50px 0 0 50px;
-    width: 100px;
-    height: 100px;
     background-image: url("../img/js1.png");
-    background-size: cover;
-    transform: scale(1);
-    transform: translateY(-10%);
-    transition: transform 1s;
 }
-
-#skill .js:after {
+/*悬浮效果*/
+#skill .skill_name:after {
     content: '';
     display: block;
     position: absolute;
@@ -403,33 +249,42 @@ img {
     transition: transform 1s;
 }
 
-#skill .js:hover {
+#skill .skill_name:hover {
     transform: translateY(-40px);
     transition: transform 1s;
 }
 
-#skill .js:hover:after {
+#skill .skill_name:hover:after {
     transform: translate(-50%, 20px) scale(0.75);
     transition: transform 1s;
-
 }
 
-#skill .js:hover .js_bg {
+#skill .skill_name:hover .skill_bg {
     filter: alpha(opacity=20);
     opacity: 0.2;
     transition: all 0.5s;
 }
 
-#skill .js .js_bg {
+#skill .skill_bg {
     width: 100%;
     height: 100%;
-    background: linear-gradient(200deg, red, black);
     filter: alpha(opacity=40);
     opacity: 0.4;
     transition: all 0.5s;
     border-radius: 10px;
 }
+#skill .html_bg{
+    background: linear-gradient(200deg, red, orange);
+}
 
+#skill .css_bg {
+    background: linear-gradient(200deg, green, blue);
+}
+
+#skill .js_bg {
+    background: linear-gradient(200deg, red, black);
+}
+/*技能详细列表*/
 #skill .content {
     width: 75%;
     height: 55%;
@@ -443,7 +298,6 @@ img {
 
 #skill .item_html .content {
     background: #C34814;
-
 }
 
 #skill .item_css .content {
@@ -453,7 +307,7 @@ img {
 #skill .item_js .content {
     background: #AB1D2C;
 }
-
+/*技能详细列表文字部分*/
 #skill .skill_right .text {
     display: table-cell;
     vertical-align: middle;
@@ -466,18 +320,12 @@ img {
 
 /*demo部分*/
 #demo {
-    /*background: url("../img/demo_bg1.fw.png");*/
     background: #111;
     background-size: cover;
     overflow: hidden;
 }
 
-#demo .demo_bg {
-    position: absolute;
-    top: 100%;
-    left: 0;
-}
-
+/*轮播图容器*/
 #demo .slider {
     position: relative;
     margin: 0px auto;
@@ -485,26 +333,23 @@ img {
     width: 1000px;
     height: 100%;
     overflow: hidden;
-    /*background: pink;*/
     z-index: 2;
     filter: alpha(opacity=0);
     opacity: 0;
 }
-
-#demo.second.current .slider{
+/*轮播图透明度动画*/
+#demo.second.current .slider {
     filter: alpha(opacity=100);
     opacity: 1;
     transition: all 0.5s;
 }
-
-
+/*轮播图箭头部分*/
 #demo .slider .arrow {
     width: 30px;
     height: 60px;
     border: 2px solid orange;
     position: absolute;
     top: 350px;
-    /*margin-top: -30px;*/
     color: orange;
     font-size: 30px;
     line-height: 60px;
@@ -526,22 +371,12 @@ img {
     right: 0px;
 }
 
-#demo .slider .screen{
-    position: absolute;
-    width: 1000px;
-    height: 560px;
-    background: rgba(0,0,0,0.4);
-    box-shadow: inset 0px 0px 50px 10px #222;
-    transition: all 0.5s;
-    z-index: 49;
-}
-
+/*轮播图图片列表*/
 #demo .slider ul {
     position: absolute;
     width: 5000px;
     left: 0px;
     z-index: 9;
-    /*overflow: hidden;*/
 }
 
 #demo .slider li {
@@ -557,35 +392,137 @@ img {
     height: 100%;
     cursor: pointer;
 }
-#demo .slider li a img{
+
+#demo .slider li a img {
     cursor: pointer;
-    /*width: 100%;*/
-    /*height: 100%;*/
 }
 
-#demo .slider li a:hover .screen{
-    background: rgba(0,0,0,0.2);
+/*每个轮播图片的遮罩*/
+#demo .slider .screen {
+    position: absolute;
+    width: 1000px;
+    height: 560px;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0px 0px 50px 10px #111;
+    transition: all 0.5s;
+    z-index: 49;
+}
+#demo .slider li a:hover .screen {
+    background: rgba(0, 0, 0, 0.2);
     box-shadow: inset 0px 0px 0px 0px #222;
     transition: all 0.5s;
 }
 
-#about .about {
-    width: 300px;
-    height: 200px;
-    background: rgba(0, 0, 0, 0.2);
+/*about页面部分*/
+#point {
+    background: #000;
+}
+/*整个页面的容器*/
+#about .about_bg {
     position: relative;
-    /*top: 200%;*/
+    height: 100%;
+}
+/*内容的容器*/
+#about .content {
+    position: relative;
+    z-index: 99;
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 120px;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: default;
+    overflow: hidden;
+}
+
+/*内容左半部分*/
+#about .content_left{
+    float: left;
+    width: 580px;
+    margin-top: 200px;
+}
+#about .content_left p {
+    margin-left: -2000px;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    transition: all 1s;
+}
+
+/*内容右半部分*/
+#about .content_right{
+    float: right;
+    width: 580px;
+}
+#about .content_right p {
+    filter: alpha(opacity=0);
+    opacity: 0;
+    transition: all 1s;
 }
 
 
-#about canvas {
-    position: absolute;
-    padding:0;
-    margin:0;
+#about .content p {
+    letter-spacing: 2px;
+    text-indent: 40px;
+    font-size: 14px;
+    line-height: 30px;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    transition: all 1s;
 }
 
-#about div.btnbg {
-    position:fixed;
-    left:0;
-    top:0;
+/*特殊字体尺寸*/
+#about .content .first_1 span{
+    font-size: 40px;
+    letter-spacing: 4px;
 }
+
+#about .content .first_2 span{
+    font-size: 34px;
+}
+
+#about .content .last_1 span{
+    font-size: 40px;
+    letter-spacing: 4px;
+}
+
+/*内容的动画*/
+#about.current .first_1{
+    margin-left: 0;
+    filter: alpha(opacity=100);
+    opacity: 1;
+    transition: all 2s ;
+}
+#about.current .first_2{
+    margin-left: 0;
+    filter: alpha(opacity=100);
+    opacity: 1;
+    transition: all 2s 3s;
+}
+#about.current .first_3{
+    margin-left: 0;
+    filter: alpha(opacity=100);
+    opacity: 1;
+    transition: all 2s 8s;
+}
+#about.current .first_4{
+    margin-left: 0;
+    filter: alpha(opacity=100);
+    opacity: 1;
+    transition: all 2s 12s;
+}
+
+#about.current .content_right .last_1, #about.current .content_right .last_2{
+    filter: alpha(opacity=100);
+    opacity: 1;
+    transition: all 1s 16s;
+}
+#about.current .content_right .last_3 {
+    filter: alpha(opacity=100);
+    opacity: 1;
+    transition: all 1s 20s;
+}
+
