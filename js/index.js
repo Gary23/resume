@@ -6,6 +6,9 @@ $(function () {
         'width': $('#demo').css('width'),
         'height': $('#demo').css('height')
     })
+
+    $("#demo .snow").let_it_snow();
+
     // demo页面的轮播图
     slider();
     function slider() {
@@ -61,6 +64,7 @@ $(function () {
             ul.stop(true, false).animate({left: (pic * -1000) + 'px'}, 500, 'linear');
         }
     }
+
 
 
     // about页面的背景

@@ -325,6 +325,12 @@ img {
     overflow: hidden;
 }
 
+#demo .demo_bg {
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+}
+
 /*轮播图容器*/
 #demo .slider {
     position: relative;
@@ -336,6 +342,7 @@ img {
     z-index: 2;
     filter: alpha(opacity=0);
     opacity: 0;
+    z-index: 99;
 }
 /*轮播图透明度动画*/
 #demo.second.current .slider {
